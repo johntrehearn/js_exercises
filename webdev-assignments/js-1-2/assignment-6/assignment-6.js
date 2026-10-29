@@ -13,4 +13,3 @@ if (continueCal) {
     } else {
         document.querySelector("#target").innerHTML = `<h2>The square root is not calculated.</h2>`;
     }
-
