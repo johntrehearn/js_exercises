@@ -1,9 +1,19 @@
-integer1 = parseInt(prompt("Please enter first integer"))
-integer2 = parseInt(prompt("Please enter second integer"))
-integer3 = parseInt(prompt("Please enter third integer"))
+name = prompt("Please insert your name:")
 
-let sum = integer1 + integer2 + integer3;
-let product = integer1 * integer2 * integer3;
-let average = sum / 3;
+let choice = Math.floor(Math.random() * 4) + 1
 
-document.querySelector("#target").innerHTML = `<p>Sum: ${sum}</p> <p>Product: ${product}</p> <p>Average: ${average}`;
+console.log(choice)
+
+let house;
+
+if (choice === 1) {
+    house = "Gryffindor";
+} else if (choice === 2) {
+    house = "Slytherin";
+} else if (choice === 3) {
+    house = "Hufflepuff";
+} else {
+    house = "Ravenclaw";
+}
+
+document.querySelector("#target").innerHTML = `<h2>${name}, you are ${house}. </h2>`;
