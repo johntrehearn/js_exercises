@@ -31,5 +31,7 @@ _This list is updated automatically by the Metropolia ICT extension._
 - 6. Square root: ✔ completed, 3/3 test points (`js-1-2/assignment-6/assignment-6.js`)
 - 7. Sum of dice: ✔ completed, 2/2 test points (`js-1-2/assignment-7/assignment-7.js`)
 - 8. Leap years in a list: ✔ completed, 3/3 test points (`js-1-2/assignment-8/assignment-8.js`)
+- 9. Prime number: ✘ not completed yet, 0/2 test points (`js-1-2/assignment-9/assignment-9.js`)
+- 10. Dice probability by simulation: ✘ not completed yet, 0/5 test points (`js-1-2/assignment-10/assignment-10.js`)
 
 <!-- metropolia:progress:end -->
