@@ -1,24 +1,19 @@
-let startYear = parseInt(prompt("Please enter the start year:"));
-let endYear = parseInt(prompt("Please enter the end year:"));
+let noDice = parseInt(prompt("Please enter the number of dice:"));
+let numProb = parseInt(prompt("Please enter the result you want the probability for:"));
+let rollTotal = 0;
+let totalCorrect = 0;
 
-let year = startYear;
+for (let i = 1; i <= 10000; i++) {
+    rollTotal = 0;
 
-while (startYear <= endYear) {
-    let leapYear = false;
-    if (year % 4 === 0){
-        if ((year % 100 !== 0) || (year % 400 === 0)) {
-            leapYear = true;
-        }else {
-            leapYear = false;
-            }
-    } else {
-        leapYear = false;
+    for (let j = 1; j <= noDice; j++) {
+        rollTotal += Math.floor(Math.random() * 6) + 1;
     }
-    if (leapYear === true) {
-        document.querySelector("#target").innerHTML += `<li>${year}</li>`;
+    if (rollTotal === numProb) {
+        totalCorrect++;
     }
-    startYear++;
-    year++;
 }
 
+let percentCorrect = parseFloat((totalCorrect / 10000) * 100).toFixed(2);
 
+document.querySelector("#target").innerHTML = `<h2>Probability to get sum ${numProb} with ${noDice} dice is ${percentCorrect}%</h2>`;
