@@ -1,24 +1,23 @@
-let startYear = parseInt(prompt("Please enter the start year:"));
-let endYear = parseInt(prompt("Please enter the end year:"));
+let checkNo = parseInt(prompt("Please enter the number to check:"));
 
-let year = startYear;
+let isPrime = false;
 
-while (startYear <= endYear) {
-    let leapYear = false;
-    if (year % 4 === 0){
-        if ((year % 100 !== 0) || (year % 400 === 0)) {
-            leapYear = true;
-        }else {
-            leapYear = false;
-            }
-    } else {
-        leapYear = false;
+if (checkNo > 1) {
+    isPrime = true;
+    for (let i = 2; i < checkNo; i++) {
+        if (checkNo % i === 0) {
+            isPrime = false;
+            break;
+        } else{
+            isPrime = true;
+        }
     }
-    if (leapYear === true) {
-        document.querySelector("#target").innerHTML += `<li>${year}</li>`;
-    }
-    startYear++;
-    year++;
+} else {
+    isPrime = false;
 }
 
-
+if (isPrime === true) {
+    document.querySelector("#target").innerHTML = `<h2>${checkNo} is a prime number. </h2>`;
+} else {
+    document.querySelector("#target").innerHTML = `<h2>${checkNo} is not a prime number. </h2>`;
+}
